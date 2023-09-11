@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap");
+
+:root {
+  --Moderate-violet: hsl(263, 55%, 52%);
+  --Very-dark-grayish-blue: hsl(217, 19%, 35%);
+  --Very-dark-blackish-blue: hsl(219, 29%, 14%);
+  --White: hsl(0, 0%, 100%);
+  --Light-gray: hsl(0, 0%, 81%);
+  --Light-grayish-blue: hsl(210, 46%, 95%);
+}
+body {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 60px 30px;
+  background-color: var(--Light-grayish-blue);
+  font-family: "Barlow Semi Condensed", sans-serif;
+}
+.grid {
+  border-radius: 10px;
+  margin-top: 30px;
+}
+.grid1,
+.grid2,
+.grid3,
+.grid4,
+.grid5 {
+  padding: 1.5rem 40px;
+}
+/* Grid1 section */
+.grid1 {
+  background-image: url(./images/bg-pattern-quotation.svg);
+  background-repeat: no-repeat;
+  background-position: 90% 0;
+  background-color: var(--Moderate-violet);
+}
+
+.profile__img {
+  float: left;
+  border-radius: 50%;
+
+  width: 40px;
+  margin-right: 20px;
+}
+.profile__border {
+  border: 2px solid #a675f0;
+}
+.title {
+  font-size: 20px;
+  line-height: 1.3;
+  color: var(--White);
+  margin: 20px 0 20px 0;
+}
+.text,
+.user {
+  font-size: 14px;
+  line-height: 1.4;
+  color: var(--Light-gray);
+  opacity: 0.7;
+}
+.text {
+  text-align: justify;
+}
+.name {
+  margin: 0;
+  color: var(--White);
+  letter-spacing: 0.4px;
+}
+.user {
+  margin: 0;
+  opacity: 0.5;
+  margin-top: 3px;
+}
+
+/* grid2 section */
+
+.grid2 {
+  background-color: var(--Very-dark-grayish-blue);
+}
+
+/* grid3 section */
+.grid3,
+.grid5 {
+  background-color: var(--White);
+}
+.dark,
+.light__dark {
+  color: var(--Very-dark-grayish-blue);
+}
+.grid4 {
+  background-color: var(--Very-dark-blackish-blue);
+}
+
+.attribution {
+  padding: 50px 1rem;
+}
+.attribution a {
+  text-decoration: none;
+  color: var(--Very-dark-blackish-blue);
+}
+.attribution a:hover {
+  color: var(--Moderate-violet);
+}
+@media (min-width: 768px) {
+  body {
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .gridbox {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 2rem;
+  }
+  .grid {
+    margin: 0;
+  }
+  .grid1 {
+    grid-column: span 2;
+  }
+  .grid5 {
+    grid-area: 1/4/3/5;
+  }
+  .grid4 {
+    grid-column: span 2;
+  }
+}
